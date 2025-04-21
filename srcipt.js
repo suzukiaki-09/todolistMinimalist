@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function addTask() {
         const title = taskInput.value.trim();
         const duration = parseInt(taskTime.value);
-        if (title) {
+        if (title && !isNaN(duration) && duration > 0) {
             const now = new Date();
             const dueDate = new Date(now.getTime() + duration * 60000);
             const task = {
@@ -104,6 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
             showGif('taskAdded');
             taskInput.value = '';
             taskInput.focus();
+            taskTime.value = 30; // reset to default value
         }
     }
 

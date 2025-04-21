@@ -14,14 +14,7 @@
 
         <div class="input-container">
             <input type="text" id="taskInput" placeholder="Add a new task...">
-            <select id="taskTime">
-                <option value="2">2 min</option>
-                <option value="30">30 min</option>
-                <option value="60">1 hour</option>
-                <option value="120">2 hours</option>
-                <option value="240">4 hours</option>
-                <option value="1440">1 day</option>
-            </select>
+            <input type="number" id="taskTime" min="1" max="10080" value="30" placeholder="Time (min)">
             <button id="addTask">Add</button>
         </div>
 
