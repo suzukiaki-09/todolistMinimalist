@@ -1,2 +1,4 @@
 # todolistMinimalist
-This kind of todo list is a minimalist style and fully responsive design
+How to use it?
+-If you want to add a task within a hour you just input 1:00 and if minute is 1 only or 40 like that
+-It may notify you by using modal notif and alert audio.
