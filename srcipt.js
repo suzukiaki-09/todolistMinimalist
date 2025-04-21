@@ -85,9 +85,23 @@ document.addEventListener('DOMContentLoaded', function() {
         if (e.key === 'Enter') addTask();
     });
 
+    function parseTimeInput(input) {
+        if (typeof input !== 'string') input = String(input);
+        input = input.trim();
+        if (input.includes(':')) {
+            const [h, m] = input.split(':').map(Number);
+            if (!isNaN(h) && !isNaN(m)) {
+                return h * 60 + m;
+            }
+        }
+        const n = Number(input);
+        if (!isNaN(n)) return n;
+        return 0;
+    }
+
     function addTask() {
         const title = taskInput.value.trim();
-        const duration = parseInt(taskTime.value);
+        const duration = parseTimeInput(taskTime.value);
         if (title && !isNaN(duration) && duration > 0) {
             const now = new Date();
             const dueDate = new Date(now.getTime() + duration * 60000);
@@ -104,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
             showGif('taskAdded');
             taskInput.value = '';
             taskInput.focus();
-            taskTime.value = 30; // reset to default value
+            taskTime.value = 30;
         }
     }
 
