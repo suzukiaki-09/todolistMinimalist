@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List(Developed by: Benito G. Ludo)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Todo List App</h1>
+
+        <div class="input-container">
+            <input type="text" id="taskInput" placeholder="Add a new task...">
+            <select id="taskTime">
+                <option value="2">2 min</option>
+                <option value="30">30 min</option>
+                <option value="60">1 hour</option>
+                <option value="120">2 hours</option>
+                <option value="240">4 hours</option>
+                <option value="1440">1 day</option>
+            </select>
+            <button id="addTask">Add</button>
+        </div>
+
+        <div class="task-list" id="taskList">
+            <div class="empty-state">No tasks yet. Add one to get started! 🚀</div>
+        </div>
+        <div id="pagination" class="pagination"></div>
+    </div>
+
+    <div class="footer">
+        <div class="developer-info">Developed by: Benito G. Ludo</div>
+        <a href="https://github.com/suzukiaki-09" target="_blank" class="github-link">
+            <svg class="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg> GitHub
+        </a>
+    </div>
+
+    <div id="gifPopup" class="gif-popup">
+        <img id="gifImage" src="" alt="Anime GIF">
+        <div id="gifText" class="gif-popup-text"></div>
+    </div>
+
+    <audio id="warningAudio" preload="auto">
+        <source src="https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="srcipt.js">
+    </script>
+</body>
+
+</html>
